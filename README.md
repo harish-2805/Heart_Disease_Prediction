@@ -1,65 +1,120 @@
-❤️ Heart Disease Prediction using Machine Learning
+# ❤️ Heart Disease Prediction using Machine Learning
 
-This project is a Machine Learning classification model that predicts the presence of heart disease based on patient medical attributes. The model is built using Python and scikit-learn, and uses Logistic Regression for classification.
+## 📌 Project Overview
 
-📌 Project Overview
+This project uses Machine Learning classification algorithms to predict the presence of heart disease based on patient medical attributes. Multiple classification models were trained and evaluated to identify the best-performing algorithm for this healthcare prediction task.
 
-Heart disease is one of the leading causes of death worldwide. This project aims to build a predictive model that can assist in early detection using machine learning techniques.
+The project demonstrates data preprocessing, feature engineering, model training, evaluation, and comparison of different machine learning classifiers.
 
-The model processes patient data, applies preprocessing techniques, and trains a classification algorithm to predict whether a person is likely to have heart disease.
+---
 
-📊 Dataset
-Dataset used: heart.csv
-Features include medical attributes such as:
-Age
-Sex
-Chest pain type
-Blood pressure
-Cholesterol level
-And other clinical parameters
-Target variable:
-0 → No heart disease
-1 → Heart disease present
-⚙️ Technologies Used
-Python 🐍
-Pandas
-NumPy
-Matplotlib
-scikit-learn
-🧠 Machine Learning Model
-Algorithm used: Logistic Regression
-Model type: Binary Classification
-Library: scikit-learn
-Why Logistic Regression?
+## 📊 Dataset
 
-It is simple, efficient, and works well for binary classification problems like disease prediction.
+**Dataset:** `heart.csv`
 
-🛠️ Workflow
-Load dataset using Pandas
-Split features (X) and target (Y)
-Encode categorical features using OneHotEncoder
-Split data into training and testing sets (80/20)
-Feature scaling using StandardScaler
-Train Logistic Regression model
-Make predictions
-Evaluate model performance
-Cross-validation using Stratified K-Fold
-📈 Model Evaluation
-Accuracy: ~87%
-Cross-validation Accuracy: ~87%
-Standard Deviation: ~4%
+### Features include:
 
-This shows the model is fairly stable and performs consistently across different data splits.
+* Age
+* Sex
+* Chest Pain Type
+* Resting Blood Pressure
+* Cholesterol Level
+* Maximum Heart Rate
+* Exercise-Induced Angina
+* Other clinical parameters
 
-🔍 Cross Validation
+### Target Variable
 
-To ensure model reliability, Stratified K-Fold Cross Validation (k=10) was used.
-This helps in reducing bias and variance in evaluation.
+* **0** → No Heart Disease
+* **1** → Heart Disease Present
 
-👨‍💻 Author
+---
 
-Harish Jakhar
+## ⚙️ Technologies Used
 
-⭐ If you like this project
+* Python 🐍
+* Pandas
+* NumPy
+* Matplotlib
+* Scikit-learn
 
-Give it a ⭐ on GitHub and feel free to contribute!
+---
+
+## 🧠 Machine Learning Algorithms Compared
+
+The following classification algorithms were implemented and evaluated:
+
+1. Logistic Regression
+2. K-Nearest Neighbors (KNN)
+3. Support Vector Machine (SVM)
+4. Naive Bayes
+5. Decision Tree
+6. Random Forest
+
+---
+
+## 🛠️ Workflow
+
+1. Load dataset using Pandas
+2. Split features (X) and target (Y)
+3. Encode categorical variables using OneHotEncoder
+4. Split dataset into Training and Test sets
+5. Apply feature scaling using StandardScaler
+6. Train multiple classification models
+7. Evaluate performance using Cross Validation
+8. Compare model accuracy and stability
+
+---
+
+## 📈 Model Performance
+
+| Model                  | Cross Validation Accuracy | Standard Deviation |
+| ---------------------- | ------------------------- | ------------------ |
+| Logistic Regression    | 87.46%                    | 4.11%              |
+| K-Nearest Neighbors    | 86.09%                    | 2.70%              |
+| Support Vector Machine | 86.50%                    | 3.67%              |
+| Naive Bayes            | 86.37%                    | 2.39%              |
+| Decision Tree          | 79.29%                    | 3.92%              |
+| Random Forest          | 85.69%                    | 5.05%              |
+
+---
+
+## 🏆 Best Performing Model
+
+**Logistic Regression** achieved the highest cross-validation accuracy of **87.46%**, making it the best-performing model for this dataset.
+
+Additionally, **Naive Bayes** and **KNN** demonstrated lower standard deviation values, indicating more stable performance across folds.
+
+---
+
+## 🔍 Cross Validation
+
+To ensure reliable evaluation, **Stratified K-Fold Cross Validation (k=10)** was used.
+
+Benefits:
+
+* Preserves class distribution in each fold
+* Reduces evaluation bias
+* Provides a more robust estimate of model performance
+
+---
+
+## 🚀 Future Improvements
+
+* Hyperparameter Tuning using GridSearchCV
+* Feature Selection Techniques
+* Ensemble Learning Methods
+* Model Deployment using Flask or Streamlit
+* Interactive Web Application
+
+---
+
+## 👨‍💻 Author
+
+**Harish Jakhar**
+
+---
+
+## ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
